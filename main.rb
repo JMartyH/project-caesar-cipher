@@ -16,10 +16,16 @@ def caesar_cipher(user_input, shift_count)
     end
     cipher.push(char.chr)
   end
-  p cipher.join
+  puts "Your cihper is:\n#{cipher.join}"
 end
 
-caesar_cipher("hello", 12)
+puts "Please enter the string you wan to cipher: "
+input = gets.chomp()
+
+puts "Please enter how many times you want to shift: "
+shift_count = gets.chomp()
+
+caesar_cipher(input, shift_count.to_i)
 
 
 
